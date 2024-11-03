@@ -1,0 +1,271 @@
+$color1 : #88C273;
+*{
+    overflow-x: hidden;
+}
+.mainNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    img{
+        width: 175px;
+        height: 120px;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-top: 30px;
+        @media (max-width: 1200px){
+            width: 100px;
+            height: 90px;
+        }
+    }
+    h1{
+        font-size: 35px;
+        transform: rotate(90deg);
+        margin-right: 30px;
+        color: $color1;
+        cursor: pointer;
+    }
+}
+
+.sideNav{
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    transition: all .5s;
+    @media (max-width:1200px){
+        right: -100%;
+        width:50vw;
+    }
+    h1{
+        position: absolute;
+        right: 40px;
+        top:30px;
+        font-size: 30px;
+        color: $color1;
+        cursor: pointer;
+        @media (max-width:1200px){
+            font-size: 20px;
+            
+        }
+    }
+    ul{
+        list-style: none;
+        margin-top: 40%;
+        @media (max-width:1200px){
+            margin-top: 90%;
+        }
+        li{
+            width:300px;
+            border-bottom: 2px solid #cbcbcb;
+            text-align: right;
+            margin-bottom: 20px;
+            @media (max-width: 1200px){
+                width: 250px;
+            }
+            @media (max-width: 800px){
+                width: 100px;
+            }
+            a{
+                width: 100%;
+                text-decoration: none;
+                color: $color1;
+                font-size: 25px;
+                @media (max-width: 1200px){
+                    font-size: 15px;
+                }
+                &:hover{
+                    color:#368719;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+    .navLinks{
+        margin-top: 50px;
+        img{
+            width: 175px;
+            height: 120px;
+        }
+        .links{
+            color: $color1;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -10px;
+            i{
+                margin-left: 30px;
+                font-size: 30px;
+                cursor: pointer;
+                @media (max-width: 1200px){
+                    margin-left: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#0000008d,#0000008d), url("assets/1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form{
+        input{
+            font-size: 20px;
+            width: 400px;
+            height: 35px;
+            border-radius: 10px;
+            border: 1px solid $color1;
+            padding-left: 10px;
+            color: $color1;
+            @media (max-width: 1200px){
+                width: 320px;
+                font-size: 18px;
+            }
+            &::placeholder{
+                color: $color1;
+            }
+        }
+        button{
+            font-size: 20px;
+            height: 35px;
+            width: 100px;
+            border: 1px solid $color1;
+            background-color: $color1;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: #fff;
+                color: $color1;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.cards{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card{
+        width: 300px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        @media (max-width: 1300px){
+            width: 250px;
+            height: 300px;
+            font-size: 22px;
+        }
+        @media (max-width: 800px){
+            width: 200px;
+            height: 250px;
+            font-size: 22px;
+        }
+
+    }
+    #card1{
+        background-image: linear-gradient(#19d50053,#19d50048),url("assets/3.jpeg");
+    }
+    #card2{
+        background-image: linear-gradient(#0066bf78,#0066bf78),url("assets/4.jpeg");
+    }
+    #card3{
+        background-image: linear-gradient(#a75c0058,#a75c0058),url("assets/5.jpeg");
+    }
+    #card4{
+        background-image: linear-gradient(#0000006b,#0000006b),url("assets/6.jpeg");
+    }
+}
+
+.vision{
+    width: 100%;
+    height: 50vh;
+    border-top: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        width: 50%;
+        text-align: center;
+        font-size: 20px;
+        line-height: 40px;
+        @media (max-width: 800px){
+            font-size: 16px;
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+   
+    justify-content: center;
+    color: $color1;
+    border-top: 3px solid #eee;
+    div{
+        margin-top: 5px;
+        img{
+            width: 450px;
+            height: 250px;
+            
+            @media (max-width: 800px){
+                width: 350px;
+                height: 200px;
+            }
+        }
+        .link{
+            width: 500px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -40px;
+            i{
+                margin-left: 40px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// #check{
+//     z-index: 100;
+// }
+// #check:checked ~ .sideNav{
+//     right: 0;
+// }
